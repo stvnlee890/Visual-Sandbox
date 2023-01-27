@@ -51,28 +51,8 @@ tl.to(".intro-text", {
 });
 
 // SCROLL TRIGGERS
-gsap.to("#projects", {
-  scrollTrigger: {
-    trigger: ".intro-container",
-    start: "500px 400px",
-    end: "800px 200px",
-    // markers: true,
-  },
-  opacity: 1,
-  duration: 1.5,
-  color: 'rgb(60, 62, 63)'
-});
 
-gsap.to('.project-title', {
-    scrollTrigger: {
-        trigger: "#projects",
-        start: "250px 380px",
-        end: "center center",
-        // markers: true,
-    },
-    opacity: 1,
-    duration: 2,
-})
+
 gsap.from('.underline-project', {
     scrollTrigger: {
         trigger: '.underline-project',
@@ -86,3 +66,56 @@ gsap.from('.underline-project', {
 })
 
 // rgb(169, 198, 223)
+
+/*
+======================================
+ACCORDIAN
+======================================
+*/
+
+const accordian1 = gsap.timeline({
+    paused: "true",
+    reverse: "true",
+})
+
+accordian1.to("#project-heading-1 #logo1", {
+    duration: 0,
+    display: "none"
+})
+accordian1.to("#project-heading-1 #logo2", {
+    duration: 0,
+    display: "block"
+})
+accordian1.to("#project-inner-1", {
+    duration: 1,
+    height: 600,
+    opacity: 1,
+    display: "block"
+})
+
+
+const accordian2 = gsap.timeline({
+    paused: "true",
+    reverse: "true",
+})
+
+accordian2.to("#project-heading-2 #logo1", {
+    duration: 0,
+    display: "none"
+})
+accordian2.to("#project-heading-2 #logo2", {
+    duration: 0,
+    display: "block"
+})
+accordian2.to("#project-inner-2", {
+    duration: .5,
+    opacity: 1,
+    height: 600,
+    display: "block"
+})
+
+function toggle(event) {
+    // event.play()
+    event.reversed() ? event.play() : event.reverse()
+    console.log("clicked")
+}
