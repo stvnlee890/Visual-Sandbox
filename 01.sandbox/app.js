@@ -73,11 +73,19 @@ ACCORDIAN
 ======================================
 */
 
+/*
+You can initialize an accordian with properties to use on multiple components to keep code DRY
+*/
 const accordian1 = gsap.timeline({
     paused: "true",
     reverse: "true",
 })
 
+/*
+You want the first logo "+" to display none 
+And the second logo to display block so it shows up on click
+This feels like react state almost, setting state to true / false etc.
+*/
 accordian1.to("#project-heading-1 #logo1", {
     duration: 0,
     display: "none"
@@ -87,7 +95,13 @@ accordian1.to("#project-heading-1 #logo2", {
     display: "block"
 })
 accordian1.to("#project-inner-1", {
-    duration: 1,
+    duration: .5,
+    /*
+    added height property here
+    .project-inner has overflow:hidden so if we adjust height property to a height 
+    that is taller than the div then it will display entire content. 
+    If height property here is lower, than it displays partial.
+    */
     height: 600,
     opacity: 1,
     display: "block"
@@ -116,6 +130,10 @@ accordian2.to("#project-inner-2", {
 
 function toggle(event) {
     // event.play()
+    /*
+    GSPA provides you with reversed, play, reverse methods
+    Study these more, they come in handy
+    */
     event.reversed() ? event.play() : event.reverse()
     console.log("clicked")
 }
