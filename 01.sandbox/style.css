@@ -1,46 +1,94 @@
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
-    width: 100vw;
-    height: 300vh;
-    padding: 0;
-    font-family: 'IBM Plex Mono', monospace;
-    background-color: rgb(60, 62, 63);
-    color:white;
-    font-size: 48px;
-    font-weight: bold;
-    overflow-x: none;
+  width: 100vw;
+  height: 300vh;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: rgb(60, 62, 63);
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  overflow-x: none;
 }
 
 .list-container {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .list-items {
-    cursor: pointer;
+  cursor: pointer;
 }
 .list-items:hover {
-    color: rgb(248, 197, 43)
+  color: rgb(248, 197, 43);
 }
 
 #underline {
-    border-bottom: .5px solid white;
-    width: 100vw;
+  border-bottom: 0.5px solid white;
+  width: 100vw;
 }
 
 #intro {
-    opacity: 0;
-    text-align: center;
+  opacity: 0;
+  text-align: center;
 }
 
 .intro-container {
-    display: flex;
-    justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.intro-text {
+  font-size: 16px;
+  opacity: 0;
+  width: 70%;
+  text-align: left;
+  justify-self: end;
 }
 .box {
-    width: 300px;
-    height: 400px;
-    background-color: rgb(173, 246, 203);
+  width: 300px;
+  height: 400px;
+  background-color: rgb(173, 246, 203);
+  opacity: 0;
+  margin-top: 100px;
+  transition-duration: 1s;
+  grid-row-end: span 2;
+}
+
+.box:hover {
+  background-color: rgb(246, 173, 212);
+  transition-duration: 1s;
+}
+
+#projects {
+  margin-top: 40%;
+  opacity: 0;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(60, 62, 63);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.project-names {
+    width: 80%;
+}
+
+.underline-project {
+  border-bottom: 0.5px solid rgb(60, 62, 63);
+  width: 100vw;
+
+}
+
+.project-title {
     opacity: 0;
-    margin-top: 100px;
+    margin-left:40px;
+    cursor: pointer;
 }
