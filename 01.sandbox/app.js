@@ -1,11 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
-const tl = gsap.timeline();
+const tl = gsap.timeline({ ease: "power4.inOut" });
 
 // TIMELINE
 tl.from(".list-items", {
   y: -100,
   duration: 0.6,
-  stagger: 0.25,
 });
 tl.from("#underline", {
   x: -window.innerWidth,
