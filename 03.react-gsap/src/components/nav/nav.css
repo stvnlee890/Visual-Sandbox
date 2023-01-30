@@ -1,0 +1,39 @@
+.nav-container {
+  border-bottom: 0.5px solid white;
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 850px;
+  margin: 20px auto;
+}
+
+.nav-lists {
+  list-style: none;
+  color: #4a4a4a;
+  font-size: 6rem;
+  cursor: pointer;
+}
+.word-list {
+  position: relative;
+}
+.word-list:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #4a4a4a;
+  transition: transform 0.2s ease-out;
+  transform-origin: bottom left;
+}
+.word-list:hover:after {
+  border-bottom: 1px solid black;
+  transform: scaleX(1);
+}
+.number-list {
+  font-size: 2rem;
+  color: #366c99;
+}
