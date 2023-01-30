@@ -4,6 +4,7 @@ body {
     color: whitesmoke;
     width: 100vw;
     font-family: 'Inconsolata', monospace;
+    margin: 0;
 }
 
 .wrapper {
@@ -34,6 +35,7 @@ h1 {
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     /* transform: translateY(100px); */
     justify-self: center;
+    border-radius: 20px;
 }
 
 .inner-box {
@@ -45,6 +47,7 @@ h1 {
     left: 10px;
     opacity: 0;
     transition-duration: .5s;
+    border-radius: 20px;
 }
 
 .inner-box:hover {
