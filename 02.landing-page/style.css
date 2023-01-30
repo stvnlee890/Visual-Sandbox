@@ -73,7 +73,6 @@ h1 {
     margin: 0 auto;
     height: 100px;
     opacity: 1;
-    /* transform: translateY(100px); */
 }
 
 .desc {
@@ -89,20 +88,26 @@ h1 {
     width: 12px;
     height: 12px;
     border-radius: 100%;
+    border: .5em solid rgb(44, 42, 42);
     content: '';
-    display: block;
     position: absolute;
     top: 0;
-    left: -6.5px;
-    transition-duration: 3s;
-    transition: ease-in-out;
-    opacity: 1
+    left: -15px;
+    opacity: 1;
+    background: #BA62AD;
+    transition-duration: .3s;
 }
 
 .cards:hover::before {
     scale: 1.2;
-
     background-color: rgb(79, 191, 222);
-    transition-duration: 3s;
-    transition: ease-in-out;
+    transition-duration: .3s;
+}
+
+.footer {
+    width: 100%;
+    height: 300px;
+    margin-top: 10%;
+    background-color: aqua;
+    opacity: 1
 }
