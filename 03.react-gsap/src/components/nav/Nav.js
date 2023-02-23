@@ -4,24 +4,31 @@ import "./nav.css";
 
 import { animateNavWrapper } from "../../animations/nav-animations";
 
-const Nav = () => {
+const Nav = ({ link, setLink }) => {
     const nav = useRef(null)
+    const navContainer = useRef(null)
     const lists = useRef(null)
     useLayoutEffect(() => {
-        animateNavWrapper(nav, lists)
+        animateNavWrapper(nav, navContainer)
     }, [])
+
+    const handleClick = (e) => {
+      setLink(e.target.innerHTML)
+    }
+  
+    
   return (
-    <div className="nav-container">
+    <div ref={navContainer} className="nav-container">
       <ul ref={nav} className="nav-wrapper">
-        <li ref={lists} className="nav-lists">
+        <li onClick={handleClick} ref={lists} id="about" className="nav-lists">
           <span className="number-list">01.</span>
           <span className="word-list">About</span>
         </li>
-        <li className="nav-lists">
+        <li onClick={handleClick} id="works" className="nav-lists">
           <span className="number-list">02.</span>
           <span className="word-list">Works</span>
         </li>
-        <li className="nav-lists">
+        <li onClick={handleClick} id="resume" className="nav-lists">
           <span className="number-list">03.</span>
           <span className="word-list">Resume</span>
         </li>

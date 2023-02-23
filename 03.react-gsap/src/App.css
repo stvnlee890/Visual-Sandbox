@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 html {
-  background-color: #ffffff;
-  font-family: 'helvetica';
+  background-color: #ebebeb;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
-  color: whitesmoke;
+
   font-size: 12px;
 }
 

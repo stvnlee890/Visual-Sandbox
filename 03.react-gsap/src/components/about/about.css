@@ -1,0 +1,33 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    height: 100%
+}
+
+.about-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-border {
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    transform-origin: bottom;
+}
+.about-img {
+    background-color: aquamarine;
+    width: 400px;
+    height: 500px;
+}
+
+.about-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-desc {
+    width: 400px;
+    height: 500px;
+    color: black;
+}

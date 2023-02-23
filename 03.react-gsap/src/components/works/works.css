@@ -1,0 +1,38 @@
+.works-container {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: 1fr 1px 1fr 1px 1fr;
+    height: 100%;
+}
+
+.works-border {
+    height: 1px;
+    background-color: black;
+}
+.side {
+    width: 1px;
+    height: 100%;
+    grid-row: 1 / 6;
+    transform-origin: bottom;
+}
+
+.one {
+    grid-row-start: 2;
+    transform-origin: left;
+}
+.two {
+    grid-row-start: 4;
+    transform-origin: left;
+}
+.three {
+    grid-column: 3;
+    grid-row-start: 2;
+    transform-origin: left;
+}
+.four {
+    grid-column: 3;
+    transform-origin: left;
+}
+.works-2 {
+    grid-column-start: 1;
+}
