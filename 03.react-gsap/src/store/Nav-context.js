@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const NavContext = React.createContext({});
 
 export const NavContextProvider = (props) => {
   const [link, setLink] = useState("About");
   return (
-    <NavContext.Provider
-      value={{ link: link, setLink: setLink }}
-    >{props.children}</NavContext.Provider>
+    <NavContext.Provider value={{ link: link, setLink: setLink }}>
+      {props.children}
+    </NavContext.Provider>
   );
 };
 
-export default NavContext
+export default NavContext;

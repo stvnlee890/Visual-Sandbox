@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 
-export const animateWorks = (el1) => {;
+export const animateWorks = (el1) => {
   const border = el1;
   const tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
 
