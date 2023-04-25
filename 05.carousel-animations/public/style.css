@@ -5,6 +5,12 @@
     object-fit: cover;
     visibility: hidden;
 }
+
+/* 
+Remember, position absolute will be positioned relative to its next parent 
+Have overflow hidden so that elements that are outside of the scope of the div's size
+will be hidden. Adding a much cooler effect to the animation.
+*/
 .image-wrapper {
     position: absolute;
     overflow: hidden;
@@ -14,7 +20,6 @@
     width: 40px;
     object-fit: cover;
     padding: 3px;
-
 }
 
 .carousel-image-btn {
@@ -40,6 +45,7 @@ body {
     margin: 100px;
 }
 
+/* Need to make this position absolute so it can freely move around viewport */
 .moving-border {
     position: absolute;
     height: 50px;
