@@ -2,19 +2,20 @@ import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import "./works.css";
 
-import { animateWorks } from "./works-animation";
+import { animateWorks, animateText } from "./works-animation";
 const Works = () => {
   const borders = useRef(null);
 
   // can target children nodes to iterative over each node and apply animation
   useLayoutEffect(() => {
     const refArr = [...borders.current.children];
-    const time = setTimeout(() => {
-      console.log("IN TIMEOUT")
+    // const time = setTimeout(() => {
+    //   console.log("IN TIMEOUT")
       refArr.forEach((ele) => {
         if (ele.className.includes("works-border")) animateWorks(ele);
+        else if (ele.className.includes("works-text")) animateText(ele)
       })
-    }, 3000)
+    // }, 3000)
     // let ctx = gsap.context(() => {
     //   });
     
@@ -25,15 +26,19 @@ const Works = () => {
      */
     return () => {
       console.log("CLEAN UP")
-      clearTimeout(time)
+      // clearTimeout(time)
     }
   }, []);
 
   return (
     <div ref={borders} className="works-container">
-      <div className="works-1">WORKS 1</div>
+      <div className="works-text works-1">
+        <h1>Works 1</h1>
+      </div>
       <div className="works-links"></div>
-      <div className="works-2">WORKS 2</div>
+      <div className="works-text works-2">
+        <h1>Works</h1>
+      </div>
       <div className="works-links"></div>
 
       <div className="works-border one"></div>

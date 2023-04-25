@@ -1,0 +1,39 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  /* background-color: rgb(198, 198, 198); */
+  height: 100vh;
+}
+
+h1 {
+  color: rgb(50, 50, 50);
+  font-size: 80px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.text-wrapper {
+  overflow: hidden;
+}
+/* 
+section {
+  height: 100vh;
+} */
+
+img {
+  height: 500px;
+}
+
+.image-wrapper {
+  /* margin-bottom: 700px; */
+  overflow: hidden;
+  margin-bottom: 300px
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+

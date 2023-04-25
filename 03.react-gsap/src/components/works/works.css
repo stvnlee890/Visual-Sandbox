@@ -36,3 +36,7 @@
 .works-2 {
     grid-column-start: 1;
 }
+
+.works-text {
+    margin-left: 20px;
+}

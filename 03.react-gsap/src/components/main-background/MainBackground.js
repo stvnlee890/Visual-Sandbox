@@ -8,7 +8,7 @@ import { useRef, useLayoutEffect } from "react";
 import { animateFrontPage } from "../../animations/animation";
 
 const MainBackground = ({ link }) => {
-    console.log(link)
+  console.log(link);
   const bgContainer = useRef(null);
 
   useLayoutEffect(() => {
@@ -16,8 +16,8 @@ const MainBackground = ({ link }) => {
   }, []);
   return (
     <div ref={bgContainer} className="bg-container">
-        {link === "About" &&  <About />}
-        {link === "Works" &&  <Works/>}
+      {link === "About" && <About />}
+      {link === "Works" && <Works />}
     </div>
   );
 };
