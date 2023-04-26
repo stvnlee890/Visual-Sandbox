@@ -10,7 +10,7 @@ window.onload = function () {
   imageBtn.forEach((element, i) => {
     const btnY = movingBorder.getBoundingClientRect().y
     const btnX = movingBorder.getBoundingClientRect().x
-    // Get width and height of the movingBorder element
+    // Get width and height of the movingBorder elements
     const btnW = movingBorder.getBoundingClientRect().width
     const btnH = movingBorder.getBoundingClientRect().height
     element.addEventListener("click", (e) => {
