@@ -3,9 +3,18 @@
     height: 400px;
     width: 400px;
     object-fit: cover;
-    visibility: hidden;
+    display: none;
+    border: none;
+    opacity: 0;
 }
-
+.placeholder {
+    background-color: orange;
+}
+.container {
+    /* height: 100vh; */
+    width: 100vw;
+    background-color: orange;
+}
 /* 
 Remember, position absolute will be positioned relative to its next parent 
 Have overflow hidden so that elements that are outside of the scope of the div's size
@@ -19,7 +28,6 @@ will be hidden. Adding a much cooler effect to the animation.
     height: 40px;
     width: 40px;
     object-fit: cover;
-    padding: 3px;
 }
 
 .carousel-image-btn {
@@ -29,6 +37,8 @@ will be hidden. Adding a much cooler effect to the animation.
 
 .btn-image-wrapper {
     margin-bottom: 20px;
+    /* border: 1px solid black; */
+    /* display: inline-block; */
 }
 
 body {
@@ -43,12 +53,23 @@ body {
     height: 400px;
     width: 400px;
     margin: 100px;
+    border: 1px solid black;
 }
 
 /* Need to make this position absolute so it can freely move around viewport */
 .moving-border {
-    position: absolute;
+    /* position: relative; */
     height: 50px;
     width: 75px;
-    border: 1px solid black
+    border: 1px solid black;
 }
+
+
+.images.picture {
+    opacity: 1;
+    animation-delay: 1s;
+  }
+  
+  .section2 {
+    height: 100vh;
+  }
