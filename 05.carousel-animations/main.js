@@ -19,18 +19,18 @@ window.onload = function () {
     e.target.getBoundingClientRect() is a method in JS that returns a DOMRect object 
     providing information about the size and position of an element RELATIVE to the viewport
 
-    Without the subtraction, imageBtn image's bottom right corner will be placed in the center of the border
-    So we need to subtract it by a quarter the height for the y, and half the width for the x
+    We subtract 
      */
       const yPos =
         e.target.getBoundingClientRect().y - (btnH / 8)
 
       const xPos =
-        e.target.getBoundingClientRect().x - btnW
-        console.log(btnW)
+        e.target.getBoundingClientRect().x - (btnW / 8)
+        console.log(xPos)
       // console.log(borderHeight)
       // console.log(e.target.getBoundingClientRect(), i)
-      // We can then comfortably include yPos and xPos into our animation without hardcoding values
+      // We can subtract the distance of the movingBorder, with the distance of the click target
+      // In yPost and xPos we subtract it by the h / w of the border to center it
       gsap.to(movingBorder, {
         y: yPos - btnY,
         x: xPos - btnX,
@@ -73,7 +73,7 @@ window.onload = function () {
               y: 450,
               ease: Power2.easeOut,
               duration: 1,
-              opacity: 0,
+           
               delay: 0.2,
             }
           );
@@ -85,7 +85,7 @@ window.onload = function () {
               y: -450,
               ease: Power2.easeOut,
               duration: 1,
-              opacity: 0,
+           
               delay: 0.2,
             }
           );

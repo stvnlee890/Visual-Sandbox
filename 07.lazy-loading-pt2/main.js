@@ -9,5 +9,5 @@ window.onload = function() {
     imgLarge.classList.add('loaded');
   };
     imgLarge.classList.add('picture');
-  largePicture.appendChild(imgLarge);
-}
+  largePicture.appendChild(imgLarge);4
+} 
