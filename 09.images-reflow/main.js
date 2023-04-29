@@ -18,11 +18,11 @@ const options = {
 }
 // Create callback function to pass into instance of IntersectionObserver
 function handleIntersection(images, i) {
-  // Here, I added I just in case we needed to alter lazyWrapper
+  // Here, I added i just in case we needed to alter lazyWrapper
   images.map((images, i) => {
     // Create a conditional for when image is intersecting
     if (images.isIntersecting) {
-      // data-src is an attribute that allows us to defer loading the images until visible
+      // data-src is an attribute that allows us to defer loading the images until visible in viewport 
       // We add the src of image to the data src
       images.target.src = images.target.dataset.src
       // Remove the img-lazy class that makes the image's visibility to hidden
