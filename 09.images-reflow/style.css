@@ -1,0 +1,28 @@
+.banner-container {
+  width: 60vw;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 500px;
+}
+
+.image-wrapper {
+  overflow: hidden;
+}
+
+.lazy-image-wrapper {
+  width: 50vw;
+  height: 500px;
+  background-color: rgb(93, 178, 171);
+  margin-top: 40px;
+}
+
+.img-lazy {
+  width: 50vw;
+  height: 500px;
+  visibility: hidden;
+}
+
+.is-loaded {
+  width: 50vw;
+  height: 500px;
+}
